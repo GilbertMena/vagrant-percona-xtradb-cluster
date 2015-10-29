@@ -64,6 +64,7 @@ if [ "$1" == '1' ]; then
   mysql -uroot -e 'GRANT PROCESS ON *.* TO "clustercheckuser"@"localhost" IDENTIFIED BY "clustercheckpassword!";'
   mysql -uroot -e 'create database clusterup;'
   mysql -uroot -e 'grant all on clusterup.* to "cu"@"%" identified by "cu";'
+  mysql -uroot -e 'GRANT ALL PRIVILEGES ON *.* TO "root"@"%";'
   mysql -uroot -e "FLUSH PRIVILEGES;"
 else
   /etc/init.d/mysql start
