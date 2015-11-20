@@ -21,9 +21,9 @@ defaults
     retries 3
     option redispatch
     maxconn 2000
-    contimeout 5000
-    clitimeout 50000
-    srvtimeout 50000
+    timeout connect 5000ms
+    timeout client 30m
+    timeout server 30m
 
 frontend pxc-front
     bind *:3306
