@@ -1,5 +1,6 @@
 #!/bin/bash
 
+yum install -y http://www.percona.com/downloads/percona-release/redhat/0.1-3/percona-release-0.1-3.noarch.rpm
 yum install -y Percona-Server-shared-51 Percona-XtraDB-Cluster-56 xinetd
 
 echo '[mysqld]
