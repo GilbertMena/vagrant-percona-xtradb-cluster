@@ -25,6 +25,8 @@ cc:80 <─── host:9090                    ├───> m3:3306
 
 The HAProxy node will come up first and you can watch http://127.0.0.1:8080/haproxy/stats -- it'll be a bit boring right up to the point where m1 comes online and you see it go green in the status board.
 
+`pxcstats:secret` for login
+
 Once m2 is up, you can start using your favorite mysql client to connect to 127.0.0.1:3306 with the userpass of `cu` and `cu` to the `clusterup` database. Note how you don't have to wait for m3 to come up, neat :D 
 
 If you `vagrant ssh ha` you'll find that sysbench 0.5 has been installed and you can use it to run the OLTP test against the cluster.
